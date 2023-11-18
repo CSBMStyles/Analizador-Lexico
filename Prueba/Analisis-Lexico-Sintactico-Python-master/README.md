@@ -10,7 +10,8 @@ ENTERO
 Números Reales.
 REAL
 
-![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/10f8781d-96c7-4e94-a83f-937a2ff77355)
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/c032713a-ea38-47f7-bba0-95d970a5b4c2)
+
 
 Identificadores.
 
