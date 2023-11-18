@@ -1,6 +1,3 @@
-# Analisis-lexico-sintactico-Python
-Analizador de léxico y sintáctico usando PLY ( Implementación de herramienta de análisis Lex-Yacc para Python)
+Documentacion de automatas fifnitos
 
-![Captura](vista/captura.png)
-
-Desarrollando en el curso de compiladores QI2017
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/25bb61dd-7eff-463f-bd10-bd2a38405b79)
