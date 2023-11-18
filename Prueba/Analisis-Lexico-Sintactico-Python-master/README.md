@@ -3,10 +3,12 @@ Documentacion de automatas fifnitos
 Los comentarios el resultado se muestra en consola
 
 Números Naturales.
+ENTERO
 
 ![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/94c2df88-664e-42f0-bce7-58eeb80d6f0c)
 
 Números Reales.
+REAL
 
 ![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/10f8781d-96c7-4e94-a83f-937a2ff77355)
 
@@ -15,6 +17,8 @@ Identificadores.
 ![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/b8de8d86-7872-4a7f-b8be-d240c80ba33f)
 
 Palabras reservadas.
+Nota: En el analizador lexico se deben escribir en minusculas
+
 INCLUIR
 
 ![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/25bb61dd-7eff-463f-bd10-bd2a38405b79)
@@ -111,9 +115,34 @@ MENOSMENOS
 ![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/c386bb41-967c-4a7f-9c03-a9fdfc43b72b)
 
 Paréntesis
+PARIZQ
+PARDER
 
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/deba7344-b6b3-4015-ab46-84e205ff31d3)
 
+Llaves
+LLAIZQ
+LLADER
 
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/5646234b-97ac-4409-bc6f-fa94d7183acf)
 
+Terminal
+FINL
 
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/967e7612-fee8-4875-9771-12343d6fd168)
 
+Separador
+COMA
+
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/68dae1a1-7756-41c1-b02f-93710bdc1c96)
+
+Cadenas de Caracteres
+CADENA
+
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/c8cabfda-6829-4482-a83d-644e802c461c)
+
+Comentarios
+
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/52ef3b94-ec6f-4346-9da3-5afa9a47c3db)
+
+![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/cec5c3f4-d512-4146-a84c-6da6917db658)
