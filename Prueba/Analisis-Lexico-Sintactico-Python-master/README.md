@@ -3,6 +3,7 @@ Documentacion de automatas fifnitos
 Los comentarios el resultado se muestra en consola
 
 Números Naturales.
+
 ![image](https://github.com/CSBMStyles/Analizador-Lexico/assets/114110116/94c2df88-664e-42f0-bce7-58eeb80d6f0c)
 
 Números Reales.
