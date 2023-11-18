@@ -5,22 +5,22 @@ resultado_lexema = []
 
 reservada = (
     # Palabras Reservadas
-    'INCLUDE',
-    'USING',
+    'INCLUIR',#'INCLUDE',
+    'USANDO',
     'NAMESPACE',
     'STD',
     'COUT',
     'CIN',
-   'GET',
+    'OBTENER',#'GET',
    'CADENA',
-  'RETURN',
-   'VOID',
-    'INT',
-    'ENDL',
+  'RETORNAR',
+   'VACIO',
+    'FINL',
 )
 tokens = reservada + (
     'IDENTIFICADOR',
     'ENTERO',
+    'REAL',
     'ASIGNAR',
 
     'SUMA',
@@ -30,8 +30,8 @@ tokens = reservada + (
     'POTENCIA',
     'MODULO',
 
-   'MINUSMINUS',
-   'PLUSPLUS',
+   'MENOSMENOS',
+   'MASMAS',
 
     #Condiones
    'SI',
@@ -51,6 +51,7 @@ tokens = reservada + (
     'DISTINTO',
     # Symbolos
     'NUMERAL',
+    
 
     'PARIZQ',
     'PARDER',
@@ -67,11 +68,11 @@ tokens = reservada + (
     'MAYORIZQ', #<<
 )
 
-# Reglas de Expresiones Regualres para token de Contexto simple
+# Reglas de Expresiones Regualres para token 
 
 t_SUMA = r'\+'
 t_RESTA = r'-'
-t_MINUSMINUS = r'\-\-'
+t_MENOSMENOS = r'\-\-'
 # t_PUNTO = r'\.'
 t_MULT = r'\*'
 t_DIV = r'/'
@@ -83,6 +84,8 @@ t_ASIGNAR = r'='
 t_AND = r'\&\&'
 t_OR = r'\|{2}'
 t_NOT = r'\!'
+
+#Operadores de Comparacion
 t_MENORQUE = r'<'
 t_MAYORQUE = r'>'
 t_PUNTOCOMA = ';'
@@ -97,12 +100,13 @@ t_COMDOB = r'\"'
 
 
 
-def t_INCLUDE(t):
-    r'include'
+def t_INCLUIR(t):
+    r'incluir'
     return t
+    
 
-def t_USING(t):
-    r'using'
+def t_USANDO(t):
+    r'usando'
     return t
 
 def t_NAMESPACE(t):
@@ -121,12 +125,12 @@ def t_CIN(t):
     r'cin'
     return t
 
-def t_GET(t):
-    r'get'
+def t_OBTENER(t):
+    r'obtener'
     return t
 
-def t_ENDL(t):
-    r'endl'
+def t_FINL(t):
+    r'finl'
     return t
 
 def t_SINO(t):
@@ -137,12 +141,12 @@ def t_SI(t):
     r'if'
     return t
 
-def t_RETURN(t):
-   r'return'
+def t_RETORNAR(t):
+   r'retornar'
    return t
 
-def t_VOID(t):
-   r'void'
+def t_VACIO(t):
+   r'vacio'
    return t
 
 def t_MIENTRAS(t):
@@ -153,13 +157,21 @@ def t_PARA(t):
     r'for'
     return t
 
+def t_REAL(t):
+    r'\d+\.\d+'
+    t.value = float(t.value)
+    return t
+
 def t_ENTERO(t):
     r'\d+'
     t.value = int(t.value)
     return t
 
+
+
 def t_IDENTIFICADOR(t):
-    r'\w+(_\d\w)*'
+    #r'\w+(_\d\w)*'
+    r'\w{1,10}'
     return t
 
 def t_CADENA(t):
@@ -170,7 +182,7 @@ def t_NUMERAL(t):
     r'\#'
     return t
 
-def t_PLUSPLUS(t):
+def t_MASMAS(t):
     r'\+\+'
     return t
 
@@ -208,7 +220,7 @@ def t_comments(t):
     print("Comentario de multiple linea")
 
 def t_comments_ONELine(t):
-     r'\/\/(.)*\n'
+     r'//(.*)'
      t.lexer.lineno += 1
      print("Comentario de una linea")
 t_ignore =' \t'

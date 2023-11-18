@@ -931,7 +931,7 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>Analisis Sintactico</string>
+          <string></string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

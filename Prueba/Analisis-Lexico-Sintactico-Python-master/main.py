@@ -6,7 +6,7 @@ from PyQt5.uic.properties import QtGui
 """ Importamos todas nuetras Ventana y funciones utiles"""
 from vista.home import  *
 from analizador_lexico import *
-from analizador_sintactico import *
+
 
 class Main(QMainWindow):
     """ Clase principal de nuestra app"""
@@ -20,13 +20,13 @@ class Main(QMainWindow):
 
         # Eventos
         self.home.bt_lexico.clicked.connect(self.ev_lexico)
-        self.home.bt_sintactico.clicked.connect(self.ev_sintactico)
+        #self.home.bt_sintactico.clicked.connect(self.ev_sintactico)
 
         self.home.bt_archivo.clicked.connect(self.ev_archivo)
-        self.home.bt_limpiar.clicked.connect(self.ev_limpiar)
+        #self.home.bt_limpiar.clicked.connect(self.ev_limpiar)
 
-        #Desarrollandores
-        self.home.estado.showMessage("Desarrollando por Maryon Torres y Michael Abril")
+        #Desarrolladores
+        self.home.estado.showMessage("Desarrollado por Andres Aristizabal y Cristian Barrera")
 
     def ev_lexico(self):
         '''
@@ -51,7 +51,7 @@ class Main(QMainWindow):
         self.home.tx_lexico.setText(cadena)
 
 
-    def ev_sintactico(self):
+   #def ev_sintactico(self):
         '''
         Manejo de analisis gramatico
         :return: 
@@ -59,19 +59,19 @@ class Main(QMainWindow):
         # print("sintactico")
 
         # limpiamos el campo
-        self.home.tx_sintactico.setText('')
+        #self.home.tx_sintactico.setText('')
         #Obtenemos los datos ingresados
-        datos = self.home.tx_ingreso.toPlainText().strip()
+        #datos = self.home.tx_ingreso.toPlainText().strip()
 
         #analizamos la gramatica de los datos ingresados
-        resultado_sintactico = prueba_sintactica(datos)
-        cadena = ''
+        '''resultado_sintactico = prueba_sintactica(datos)
+        cadena = '''''
 
         #Armanos la cadena a mostrar
-        for item in resultado_sintactico:
-            cadena += item + "\n"
+        '''for item in resultado_sintactico:
+            cadena += item + "\n"'''
         # mostramos en pantalla
-        self.home.tx_sintactico.setText( cadena )
+        #self.home.tx_sintactico.setText( cadena )
 
     def ev_archivo(self):
         '''
@@ -96,7 +96,7 @@ class Main(QMainWindow):
         '''
         self.home.tx_ingreso.setText('')
         self.home.tx_lexico.setText('')
-        self.home.tx_sintactico.setText('')
+        #self.home.tx_sintactico.setText('')
 
 
 
