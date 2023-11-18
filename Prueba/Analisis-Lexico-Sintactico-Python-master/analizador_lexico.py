@@ -19,7 +19,7 @@ reservada = (
 )
 tokens = reservada + (
     'IDENTIFICADOR',
-    'ENTERO',
+    'NATURAL',
     'REAL',
     'ASIGNAR',
 
@@ -158,11 +158,11 @@ def t_PARA(t):
     return t
 
 def t_REAL(t):
-    r'\d+\.\d+'
+    r'-?\d+\.\d+'
     t.value = float(t.value)
     return t
 
-def t_ENTERO(t):
+def t_NATURAL(t):
     r'\d+'
     t.value = int(t.value)
     return t
